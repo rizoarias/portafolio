@@ -1,0 +1,14 @@
+html, body {
+    background-color: white;
+}
+ 
+h1{
+    text-align: center;
+    color: white;
+    background-color: blue;
+}
+
+.dark-mode {
+    filter: invert(1) hue-rotate(180deg)
+}
+
