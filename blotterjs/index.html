@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="estilos.css">
+  <!--Jquery cdn link-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--Blotter script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+  <!--blotter Material script-->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/rollingDistortMaterial.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/fliesMaterial.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/liquidDistortMaterial.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/slidingDoorMaterial.min.js"></script> -->
+</head>
+<body> 
+
+<div id="myText"></div>
+  <script>
+    // BLOTTER
+  var text = new Blotter.Text("RIZO ARIAS", {
+  family : "'EB Garamond', serif",
+  size : 150,
+  fill : "#fff",
+  paddingLeft : 40,
+  paddingRight : 40
+  });
+
+  var material = new Blotter.LiquidDistortMaterial();
+  material.uniforms.uSpeed.value = 0.20;
+  material.uniforms.uVolatility.value = 0.15;
+  var blotter = new Blotter(material, {
+  texts : text
+  });
+
+  var elem = document.getElementById("myText");
+  var scope = blotter.forText(text);
+
+  scope.appendTo(elem);
+  </script>
+</body>
+</html>
