@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2{
+    font-size: 6em;        
+}
+
+h2 span{
+    position: inherit;
+    display: inline-flex;
+    color: #03a9f4;    
+}
+
+h2 span:nth-child(even){
+    color: #414141;
+    line-height: 1em;
+    letter-spacing: -1em;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+h2:hover span:nth-child(even){
+    letter-spacing: 0;
+}
+/* poner el elevado */
+/*h2 span:nth-child(1)::after{
+    content: '2';
+    bottom: 0;
+    right: -10px;
+    font-size: 0.35em;
+} */
+
+h2 i::before{
+    content: 'Diseños CSS';
+    font-size: 0.35em;
+    position: absolute;
+    text-align: center;
+    display: initial;
+    transition: 0.8s;
+}
+h2:hover i::before{
+    opacity: 0;
+    letter-spacing: 2em;
+}
+
+h2 i::after{
+    content: 'CSS Puro';
+    font-size: 0.35em;
+    position: absolute;
+    text-align: center;
+    display: initial;
+    transition: 0.8s;
+    visibility: hidden;
+}
+
+h2:hover i::after{
+    opacity: 1;
+    visibility: visible;
+}
