@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+.carousel{
+    transform: translateY(-50px);
+    height: 750px;
+    perspective: 300px;
+}
+
+.carousel .carousel-item{
+    width: 800px;
+}
+
+.carousel .carousel-item img{
+    width: 100%;
+}
+img{
+    width: 400px;
+    object-fit: cover;
+    -webkit-box-reflect: below 53px linear-gradient(transparent,transparent,rgba(0,0,0,0.3));
+}
+
+.carousel .carousel-item h3{
+    margin: -5px 0 0;
+    padding: 0;
+    background: #fff;
+    color: black;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
